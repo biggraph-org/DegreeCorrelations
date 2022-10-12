@@ -13,6 +13,7 @@ object JDMGen {
     Logger.getRootLogger.setLevel(Level.ERROR)
     val sc = new SparkContext("local[*]" , "JDMGen");
     //val edgelistFile = sc.textFile("/Users/mehmet/Desktop/sampleDatasets/facebook_combined.txt")
+    ////////
     val edgelistFile = sc.textFile("/Users/mehmet/workspace/sparkAnalytics/src/main/resources/followers.txt")
     val edgeList = parseEdgeList(edgelistFile)
     edgeList.collect().foreach(println)
