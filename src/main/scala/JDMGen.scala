@@ -1,5 +1,3 @@
-package org.biggraph
-
 import org.apache.log4j.{Level, Logger}
 import org.apache.spark.SparkContext
 import org.apache.spark.rdd.RDD
@@ -14,7 +12,7 @@ object JDMGen {
     val sc = new SparkContext("local[*]" , "JDMGen");
     //val edgelistFile = sc.textFile("/Users/mehmet/Desktop/sampleDatasets/facebook_combined.txt")
     ////////
-    val edgelistFile = sc.textFile("/Users/mehmet/workspace/sparkAnalytics/src/main/resources/followers.txt")
+    val edgelistFile = sc.textFile("/Users/mehmet/workspace/DegreeCorrelations/src/main/resources/followers.txt")
     val edgeList = parseEdgeList(edgelistFile)
     edgeList.collect().foreach(println)
     println("---------")
